@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_clean_architecture/src/config/routes/app_routes.dart';
 import 'package:flutter_clean_architecture/src/core/utils/app_strings.dart';
 
 class QuoteScreen extends StatelessWidget {
@@ -9,7 +10,11 @@ class QuoteScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(AppStrings.appName),
       ),
-      body: Center(child: Text(AppStrings.appName)),
+      body: Center(
+          child: TextButton(
+              onPressed: () =>
+                  Navigator.pushNamed(context, Routes.favouriteQouteRoute),
+              child: Text(AppStrings.appName))),
     );
   }
 }

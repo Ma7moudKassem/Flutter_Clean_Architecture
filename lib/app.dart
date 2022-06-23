@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_clean_architecture/src/config/routes/app_routes.dart';
 import 'package:flutter_clean_architecture/src/core/utils/app_colors.dart';
 import 'package:flutter_clean_architecture/src/core/utils/app_strings.dart';
-import 'package:flutter_clean_architecture/src/features/rondom_quotes/presentation/screens/quote_screen.dart';
 
 class QouteApp extends StatelessWidget {
   const QouteApp({Key? key}) : super(key: key);
@@ -12,7 +12,7 @@ class QouteApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: AppColors.primary,
       ),
-      home: const QuoteScreen(),
+      onGenerateRoute: AppRoutes.onGenerateRoute,
     );
   }
 }
