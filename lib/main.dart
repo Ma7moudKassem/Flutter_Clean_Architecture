@@ -4,3 +4,4 @@ import 'package:flutter_clean_architecture/app.dart';
 void main() {
   runApp(const QouteApp());
 }
+
