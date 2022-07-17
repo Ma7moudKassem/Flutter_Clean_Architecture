@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_clean_architecture/src/config/routes/app_routes.dart';
-import 'package:flutter_clean_architecture/src/core/utils/app_colors.dart';
+import 'package:flutter_clean_architecture/src/config/themes/app_theme.dart';
 import 'package:flutter_clean_architecture/src/core/utils/app_strings.dart';
 
 class QouteApp extends StatelessWidget {
@@ -9,10 +9,9 @@ class QouteApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: AppStrings.appName,
-      theme: ThemeData(
-        primaryColor: AppColors.primary,
-      ),
+      theme: appTheme(),
       onGenerateRoute: AppRoutes.onGenerateRoute,
     );
   }
